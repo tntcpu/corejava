@@ -9,6 +9,8 @@ public class PersonTest
 {
    public static void main(String[] args)
    {
+
+       Long startTime = System.currentTimeMillis();
       Person[] people = new Person[2];
 
       // fill the people array with Student and Employee objects
@@ -18,5 +20,10 @@ public class PersonTest
       // print out names and descriptions of all Person objects
       for (Person p : people)
          System.out.println(p.getName() + ", " + p.getDescription());
+
+      Long endTime = System.currentTimeMillis();
+      long usedTime = endTime-startTime;
+       System.out.println("method used "+usedTime+"ms!");
    }
+
 }
