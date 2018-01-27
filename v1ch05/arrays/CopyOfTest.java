@@ -33,7 +33,10 @@ public class CopyOfTest
     */
    public static Object[] badCopyOf(Object[] a, int newLength) // not useful
    {
-      Object[] newArray = new Object[newLength];
+
+
+       String[] sdf = (String[])a;
+       Object[] newArray = new Object[newLength];
       System.arraycopy(a, 0, newArray, 0, Math.min(a.length, newLength));
       return newArray;
    }
